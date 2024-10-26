@@ -1,0 +1,40 @@
+<div th:fragment="navbar">
+    <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
+        <div class="container-fluid text-white">
+            <a th:href="@{/}" class="navbar-brand d-flex align-items-center">
+                <img src="/img/icon.png" alt="Logo" width="40" height="40" class="d-inline-block align-text-top">
+                <span class="ms-2">BIBLIOTECA DE VIDEOJUEGOS</span>
+            </a> 
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <a class="btn btn-outline-success me-2" th:href="@{/randomVideogame}" role="button">RANDOM</a>
+
+                <div class="dropdown me-3">
+                    <button class="btn btn-outline-success dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        ADMINISTRACIÓN
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" th:href="@{/videogame/add}">Añadir videojuego</a></li>
+                        <li><a class="dropdown-item" th:href="@{/developmentTeam/add}">Añadir desarrollador</a></li>
+                    </ul>
+                </div>
+
+                <div class="d-flex ms-auto align-items-center"> <!-- Alinear a la derecha -->
+                    <div th:if="${showVisitsCounter}" class="btn btn-outline-success d-flex align-items-center me-2" style="width: 150px; cursor: default">
+                        <p class="mb-0 me-2" style="font-size: 0.9rem;">VISITAS:</p>
+                        <h6 class="mb-0" th:text="${visits}">0</h6>
+                    </div>
+
+                    <form th:action="@{/search}" class="d-flex" role="search">
+                        <input autofocus="autofocus" name="q" class="form-control me-2" type="search" th:placeholder="${param.q}" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">BUSCAR</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>

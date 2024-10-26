@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Añadir videojuego</title>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+	crossorigin="anonymous">
+
+<link rel="stylesheet" href="css/videogame.css">
+</head>
+<body class="bg-dark">
+	<!-- Navbar -->
+	<div th:replace="~{navbar :: navbar}"></div>
+
+	<!-- form display-->
+	<div class="container mt-4 vg-featured text-white">
+		<div class="row">
+			<div class="col-md-12">
+				<h1 th:text="${title}">title</h1>
+
+				<form method="post" th:action="@{/videogame/save}"
+					th:object="${videogame}">
+					<div class="mb-3">
+						<label for="name" class="form-label">Título</label> <input
+							autofocus="autofocus" type="text" class="form-control"
+							th:field="*{name}" id="name" placeholder="Nombre del videojuego"
+							aria-describedby="emailHelp">
+					</div>
+
+					<div class="mb-3">
+						<label for="description" class="form-label">Descripción</label>
+						<textarea type="text" class="form-control"
+							th:field="*{description}" id="description" rows="3"
+							placeholder="Descripción del videojuego"></textarea>
+					</div>
+					<div class="mb-3">
+						<label for="descriptionLarge" class="form-label">Descripción
+							larga</label>
+						<textarea type="text" class="form-control"
+							th:field="*{descriptionLarge}" id="descriptionLarge" rows="10"
+							placeholder="Descripción larga del videojuego"></textarea>
+					</div>
+
+					<div class="mb-3">
+						<label for="imageUrl" class="form-label">URL de la imagen</label>
+						<input type="text" class="form-control" th:field="*{imageUrl}"
+							id="imageUrl" placeholder="Ruta de la imagen del videojuego">
+					</div>
+
+					<div class="mb-3">
+						<label for="videoUrl" class="form-label">URL del vídeo</label> <input
+							type="text" class="form-control" th:field="*{videoUrl}"
+							id="videoUrl" placeholder="Ruta del vídeo del videojuego">
+					</div>
+
+					<div class="mb-3">
+						<label for="developmentTeam" class="form-label">Desarrollador</label>
+						<select class="form-select" aria-label="Default select example"
+							th:field="*{developmentTeam}" id="developmentTeam">
+							<option value="" disabled selected>Selecciona el
+								desarrollador del videojuego</option>
+							<option th:each="developmentTeam : ${developmentTeams}"
+								th:value="${developmentTeam.id}"
+								th:text="${developmentTeam.name}">DevelopmentTeam name</option>
+						</select>
+					</div>
+
+					<button type="submit" class="btn btn-outline-success">Guardar</button>
+				</form>
+
+			</div>
+		</div>
+	</div>
+
+	<link
+		href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+		rel="stylesheet"
+		integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+		crossorigin="anonymous">
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+		crossorigin="anonymous"></script>
+</body>
+</html>

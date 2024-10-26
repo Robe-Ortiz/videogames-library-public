@@ -1,0 +1,28 @@
+.vg-featured .card img{
+	height: 200px;
+	object-fit : cover;
+}
+
+.vg-featured .card{
+	height: 100%
+}
+
+.product-image {
+    width: 40%;  
+    height: auto;
+    margin: auto; 
+    display: block; 
+}
+
+.card {
+    border: none; 
+    padding: 0; 
+}
+
+.card-body {
+    padding: 1.25rem; 
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
