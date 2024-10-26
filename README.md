@@ -1,6 +1,8 @@
 ![Logotipo de Spring boot](spring-boot.jpeg)
 
 # Introducción
+**URL de la aplicación: http://35.180.128.87/** 
+
 Este reporsitorio es una aplicación propia que he contruido para prácticar los conocemientos que había adquirido sobre Java, Spring boot, MySQL y Bootstrap.
 
 La temática de la aplicación es videojuegos (un tópico), pero podría haber sido cualquier otra. Simplemente elegí esta por la idea de hacer una aplicación que pudiera ser útil para algunos amigos.
