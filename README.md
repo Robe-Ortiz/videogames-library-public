@@ -98,10 +98,10 @@ Evidentemente he usado la aplicación para ayudarmen en el proceso de creación.
 
 - Información, este sin duda es el punto donde más me ha ayudado. 
 
-La IA, rara vez te da una respuesta que se ajuste a la perfección a tu problema y aún menos veces, el código que genera sirve en tu aplicación a la primera. Haciendo este proyecto, me encontré con algunas tareas que era la primera vez a la que me enfrentaba.
+La IA, rara vez te da una respuesta que se ajuste a la perfección a tu problema y aún menos veces, el código que genera sirve en tu aplicación. Haciendo este proyecto, me encontré con algunas tareas que era la primera vez a la que me enfrentaba.
 
- Por ejemplo, como hacer la autenticación de usuario.Creo que  ChatGPT  es una mágnifica herramienta para cuando no sabes por donde empezar.
+ Por ejemplo, como hacer la autenticación de usuario. Creo que  ChatGPT  es una mágnifica herramienta para cuando no sabes por donde empezar.
 
-Me mostró varias tecnologías y formas de hacerlo y una vez entendí de forma superficial todas y me decanté por una, y busqué información en Internet (foros y documentación) sobre esa tecnología en concreto. 
+Me mostró varias tecnologías y formas de hacerlo y una vez entendí de forma superficial todas y me decanté por una, busqué información en Internet (foros y documentación) sobre esa tecnología en concreto. 
 
 Para mí, como primera fuente de información para realizar un acercamiento a un problema del cual no tienes ni idea es fantástica.
